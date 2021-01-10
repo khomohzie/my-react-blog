@@ -14,11 +14,11 @@ const Form = () => {
 
                     <label htmlFor="image" className="col-form-label create">Image?</label>
 
-                    <div class="custom custom-file">
-                        <input multiple="" type="file" class="custom-file-input" name="Image" />
-                        <label class="custom-file-label">
+                    <div className="custom custom-file">
+                        <input multiple="" type="file" className="custom-file-input" name="Image" />
+                        <label className="custom-file-label">
                             Click to open file browser
-                            </label>
+                        </label>
                     </div>
                     <small>If applicable</small>
                 </div>
