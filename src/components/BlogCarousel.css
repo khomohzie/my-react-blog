@@ -1,0 +1,62 @@
+@import url('../styles/fonts.css');
+@import url('../styles/styles.css');
+
+main .blog {
+    background: url("../assets/images/scott-web.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+}
+
+main .blog .blog-post {
+    padding-top: 6rem;
+}
+
+main .blog-post .blog-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Abel;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+main .blog-content .blog-title {
+    padding: 2rem 0;
+}
+
+main .blog-content .btn-blog {
+    border: none;
+    border-radius: 2rem;
+    padding: .7rem 2rem;
+    font-size: 1rem;
+    font-family: Livvic;
+    background: var(--sky);
+    margin: .5rem;
+}
+
+main .blog-content span {
+    display: block;
+}
+
+section .container .prev {
+    position: absolute;
+    top: 0%;
+    right: 54%;
+    margin: 5% auto;
+}
+
+section .container .next {
+    position: absolute;
+    top: 0%;
+    right: 47%;
+    margin: 5% auto;
+}
+
+section .container .prev:hover,
+section .container .next:hover {
+    background: var(--midnight);
+}
