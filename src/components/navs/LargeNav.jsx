@@ -5,6 +5,7 @@ import Logo from '../../assets/images/logo.svg'
 
 const LargeNav = ({ sticky }) => {
 
+    // changing the color of the dropdown navbar on mobile devices
     const [mobileBg, setMobileBg] = useState(false)
 
     const changeBg = () => {

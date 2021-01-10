@@ -42,6 +42,10 @@ a.navbar-brand {
     color: #ffffff;
 }
 
+a.navbar-brand:hover {
+    color: burlywood;
+}
+
 a.nav-link .nav-text {
     color: #ffffff;
 }
@@ -66,6 +70,8 @@ ul {
     flex-wrap: wrap;
 }
 
+h3.create,
+h5.create,
 label.create {
     color: beige;
 }
@@ -78,6 +84,31 @@ p.about-p {
 div.connect i {
     color: black;
     padding: 0 .4rem;
+}
+
+div .more-btn {
+    margin: 1rem;
+    background: var(--sky);
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+}
+
+input.submit-btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    margin: 1rem;
+    background: var(--sky);
+    color: var(--midnight);
+    font-family: Livvic, cursive;
+}
+
+input.submit-btn:hover {
+    background: transparent;
+    border: solid 1px beige;
+    color: beige;
+    font-family: Livvic;
 }
 
 

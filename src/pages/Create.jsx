@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '../components/Layout'
 import AOS from 'aos'
 import Background from '../assets/images/create-post.jpg'
+import Form from '../components/Form'
 
-const Create = () => {
+const Create = (props) => {
 
     AOS.init();
+
+    const [content2, setContent2] = useState(false);
+    const [content3, setContent3] = useState(false);
+    const [content4, setContent4] = useState(false);
 
     return (
         <div style={{ background: `url(${Background})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
@@ -16,7 +21,7 @@ const Create = () => {
                     <div className="row">
                         <div className="col-md-8 offset-md-2 mt-5">
 
-                            <h3 className="my-3 mt-5" style={{color: "beige"}}>Create Blog Post <i className="fa fa-pencil" aria-hidden="true"></i></h3>
+                            <h3 className="my-3 mt-5 create">Create Blog Post <i className="fa fa-pencil" aria-hidden="true"></i></h3>
 
                             <form>
                                 <fieldset className="form-group">
@@ -32,26 +37,73 @@ const Create = () => {
                                         <fieldset className="form-group">
                                             <label htmlFor="subtitle1" className="col-form-label create">Subtitle</label>
                                             <input type="text" className="form-control" name="subtitle1" id="subtitle1" placeholder="Subtitle" />
-                                            <small className="text-muted">If applicable</small>
-
-                                            <label className="col-form-label create" htmlFor="moresubcontents">More subtitles and contents? Choose your number.</label>
-                                            <select className="form-control">
-                                                <option defaultValue>Choose...</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
+                                            <small>If applicable</small>
                                         </fieldset>
+
+                                        <label htmlFor="image" className="col-form-label create">Image?</label>
+
+                                        <div class="custom custom-file">
+                                            <input multiple="" type="file" class="custom-file-input" name="Image" />
+                                            <label class="custom-file-label">
+                                                Click to open file browser
+                                            </label>
+                                        </div>
+                                        <small>If applicable</small>
                                     </div>
                                     <div className="col-12 col-md-8">
                                         <fieldset className="form-group">
                                             <label htmlFor="content1" className="col-form-label create">Content</label>
-                                            <textarea className="form-control" rows="10" name="content1" id="content1" placeholder="Content"></textarea>
-                                            <small className="text-muted">If applicable</small>
+                                            <textarea className="form-control" rows="10" name="content1" id="content1" placeholder="Content" required></textarea>
                                         </fieldset>
                                     </div>
                                 </div>
+
+                                <div className="more-field">
+
+                                    <h5 className="create">More subtitles and contents?</h5>
+
+                                    {content2 === true ? (
+                                        <Form />
+                                    ) : (<button className="more-btn" onClick={() => {
+                                        setContent3(false)
+                                        setContent4(false)
+                                        setContent2(!content2)
+                                    }}>
+                                        1 more content
+                                    </button>
+                                        )}
+
+                                    {content3 === true ? (
+                                        <>
+                                            <Form />
+                                            <Form />
+                                        </>
+                                    ) : (<button className="more-btn" onClick={() => {
+                                        setContent2(false)
+                                        setContent4(false)
+                                        setContent3(!content3)
+                                    }}>
+                                        2 more contents
+                                    </button>
+                                        )}
+
+                                    {content4 === true ? (
+                                        <>
+                                            <Form />
+                                            <Form />
+                                            <Form />
+                                        </>
+                                    ) : (<button className="more-btn" onClick={() => {
+                                        setContent2(false)
+                                        setContent3(false)
+                                        setContent4(!content4)
+                                    }}>
+                                        3 more contents
+                                    </button>
+                                        )}
+                                </div>
+
+                                <input type="submit" className="submit-btn" value="Submit"/>
                             </form>
 
                         </div>
