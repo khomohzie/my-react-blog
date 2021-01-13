@@ -43,12 +43,12 @@ const LargeNav = ({ sticky }) => {
                 </ul>
 
                 <span className="navbar-text">
-                    <a className="nav-link" href="/">
+                    <a className="nav-link" href="/signup">
                         <span className="fa fa-user-plus"></span><span className="nav-text"> Sign up</span>
                     </a>
                 </span>
                 <span className="navbar-text">
-                    <a className="nav-link" href="/">
+                    <a className="nav-link" href="/login">
                         <span className="fa fa-sign-in"></span><span className="nav-text"> Login</span>
                     </a>
                 </span>

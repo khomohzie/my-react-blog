@@ -14,12 +14,12 @@ const SiteTitle = ({ element }) => {
                 <div ref={element} className="site-background" data-aos="zoom-in-up" data-aos-delay="200">
                     <h3 className="description">One Blog, Many Bloggers</h3>
                     <h2 className="content">Discuss trends, share your thoughts, a letter at a time, anywhere, anytime.</h2>
-                    <button className="btn">
+                    <a href="/signup" className="btn">
                         Get started
-                    </button>
-                    <button className="btn btn-signin">
+                    </a>
+                    <a href="/login" className="btn btn-signin">
                         Sign in
-                    </button>
+                    </a>
                 </div>
             </section>
         </main>
