@@ -23,6 +23,11 @@ const SiteContent = () => {
                                     <div>
                                         <img src={Blog1} className="img" alt="blog1" />
                                     </div>
+
+                                    <div className="hovered">
+                                        <p>Why should boys have all the fun? It's the women who are making India an alcohol-loving country</p>
+                                    </div>
+
                                     <div className="post-info flex-row">
                                         <span><i className="fa fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
                                         <span><i className="fa fa-calendar text-gray"></i>&nbsp;&nbsp;December 21, 2020</span>
@@ -41,6 +46,11 @@ const SiteContent = () => {
                                     <div>
                                         <img src={Blog2} className="img" alt="blog1" />
                                     </div>
+
+                                    <div className="hovered">
+                                        <p>Why should boys have all the fun? It's the women who are making India an alcohol-loving country</p>
+                                    </div>
+
                                     <div className="post-info flex-row">
                                         <span><i className="fa fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
                                         <span><i className="fa fa-calendar text-gray"></i>&nbsp;&nbsp;December 23, 2020</span>
@@ -59,6 +69,11 @@ const SiteContent = () => {
                                     <div>
                                         <img src={Blog3} className="img" alt="blog1" />
                                     </div>
+
+                                    <div className="hovered">
+                                        <p>New data recording system to better analyse road accidents</p>
+                                    </div>
+
                                     <div className="post-info flex-row">
                                         <span><i className="fa fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
                                         <span><i className="fa fa-calendar text-gray"></i>&nbsp;&nbsp;December 25, 2020</span>
@@ -77,6 +92,11 @@ const SiteContent = () => {
                                     <div>
                                         <img src={Blog4} className="img" alt="blog1" />
                                     </div>
+
+                                    <div className="hovered">
+                                        <p>New data recording system to better analyse road accidents</p>
+                                    </div>
+
                                     <div className="post-info flex-row">
                                         <span><i className="fa fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
                                         <span><i className="fa fa-calendar text-gray"></i>&nbsp;&nbsp;December 27, 2020</span>

@@ -80,8 +80,39 @@ main .site-content .post-content .post-image .img {
     transition: all 1s ease;
 }
 
-main .site-content .post-content .post-image .img:hover {
+/* main .site-content .post-content .post-image .img:hover {
     transform: scale(1.3);
+} */
+
+main .site-content .post-content .hovered {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    height: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.8s;
+    /* opacity: 0; */
+    clip-path: circle();
+    background: rgba(0, 0, 0, 0);
+}
+
+main .site-content .post-content .hovered p {
+    color: white;
+}
+
+main .site-content .post-content .post-image:hover .hovered {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+main .site-content .post-content:hover img {
+    transform: rotate(15deg) scale(1.5);
 }
 
 main .site-content .post-content .post-image .post-info span {

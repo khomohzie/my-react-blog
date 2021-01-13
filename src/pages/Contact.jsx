@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import Background from '../assets/images/contact.jpg'
 import AOS from 'aos'
 import '../styles/styles.css'
+import SocialConnect from '../components/SocialConnect'
 
 const Contact = (props) => {
 
@@ -57,6 +58,8 @@ const Contact = (props) => {
                             </div>
                         </div>
                     </div>
+
+                    <SocialConnect />
 
                 </div>
 

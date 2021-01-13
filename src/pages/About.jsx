@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import AOS from 'aos'
 import Img from '../assets/images/about.jpg'
+import SocialConnect from '../components/SocialConnect'
 
 const About = () => {
 
@@ -20,6 +21,8 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+
+                    <SocialConnect />
 
                     <img src={Img} style={{ width: "100%", height: "400px" }} alt="blogger" />
 

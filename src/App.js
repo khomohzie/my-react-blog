@@ -11,6 +11,7 @@ import BlogPost from './pages/BlogPost'
 import Create from './pages/Create'
 import Contact from './pages/Contact'
 import About from './pages/About'
+import PageNotFound from './pages/404'
 import PasswordShowHide from './helpers/PasswordShowHide'
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
         <Route path="/password" component={PasswordShowHide} />
-        <Route path="*" render={() => <div className="text-center p-5"><h3>Oops! You're lost.</h3></div>} />
+        <Route path="*" component={PageNotFound} />
       </Switch>
     </Router>
 
