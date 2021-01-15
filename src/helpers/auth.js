@@ -49,6 +49,11 @@ export function signInWithFacebook() {
     return auth().signInWithPopup(provider);
 }
 
+export function signInWithTwitter() {
+    const provider = new auth.TwitterAuthProvider();
+    return auth().signInWithPopup(provider);
+}
+
 export function signout() {
     return auth().signOut().then(() => console.log("user signed out"))
 }

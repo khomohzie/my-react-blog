@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './LoginSignup.css'
-import { signin, signInWithGoogle, signInWithGithub, signInWithFacebook } from '../helpers/auth'
+import { signin, signInWithGoogle, signInWithGithub, signInWithFacebook, signInWithTwitter } from '../helpers/auth'
 import { signup } from '../helpers/auth'
 
 import Loginsvg from '../assets/images/welcome.svg'
@@ -91,6 +91,15 @@ const LoginSignup = () => {
         }
     }
 
+    const twitterSignIn = async () => {
+        try {
+            await signInWithTwitter();
+        }
+        catch (error) {
+            setError(error.message);
+        }
+    }
+
     return (
         <div>
             <div className={style ? "sign-container sign-up-mode" : "sign-container"}>
@@ -118,10 +127,10 @@ const LoginSignup = () => {
                                 <button className="social-icon" onClick={googleSignIn}>
                                     <i className="fa fa-google"></i>
                                 </button>
-                                <button className="social-icon">
-                                    <i className="fa fa-facebook-f" onClick={facebookSignIn}></i>
+                                <button className="social-icon" onClick={facebookSignIn}>
+                                    <i className="fa fa-facebook-f"></i>
                                 </button>
-                                <button className="social-icon">
+                                <button className="social-icon" onClick={twitterSignIn}>
                                     <i className="fa fa-twitter"></i>
                                 </button>
                                 <button className="social-icon" onClick={githubSignIn} title="Github">
@@ -156,10 +165,10 @@ const LoginSignup = () => {
                                 <button className="social-icon" onClick={googleSignIn}>
                                     <i className="fa fa-google"></i>
                                 </button>
-                                <button className="social-icon">
-                                    <i className="fa fa-facebook-f" onClick={facebookSignIn}></i>
+                                <button className="social-icon" onClick={facebookSignIn}>
+                                    <i className="fa fa-facebook-f"></i>
                                 </button>
-                                <button className="social-icon">
+                                <button className="social-icon" onClick={twitterSignIn}>
                                     <i className="fa fa-twitter"></i>
                                 </button>
                                 <button className="social-icon" onClick={githubSignIn} title="Github">
