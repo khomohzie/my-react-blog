@@ -1,0 +1,29 @@
+h3.heading {
+    line-height: 200%;
+}
+
+.search {
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    line-height: 50% !important;
+     
+    background-color: #8ac5e0 !important;
+    background-image: url( //addsearch.com/logo/AAAAAA-20.png ) !important;
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+     
+    border: 0px !important;
+    border-radius: 8rem !important;
+     
+    width: 100% !important;
+    padding: 15px !important;
+    cursor: auto !important;
+}
+
+.search::placeholder {
+    color: #eee !important;
+}
+
+input:focus {
+    outline: none;
+}

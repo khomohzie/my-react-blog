@@ -111,6 +111,11 @@ input.submit-btn:hover {
     font-family: Livvic;
 }
 
+span.username {
+    color: white;
+    margin: 0 1rem;
+}
+
 
 /*button.btn{
     border: none;

@@ -10,7 +10,7 @@ const Contact = (props) => {
     AOS.init();
 
     return (
-        <div style={{ backgroundImage: `url(${Background})`, backgroundSize: "cover", backgroundOrigin: "center", backgroundPosition: "center" }}>
+        <div style={{ backgroundImage: `url(${Background})`, backgroundSize: "cover", backgroundPosition: "center" }}>
 
             <Layout>
 
