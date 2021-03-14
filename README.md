@@ -1,2 +1,2 @@
 # my-react-blog
-A blog + mini CMS
+A blog (practice)
