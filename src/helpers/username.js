@@ -11,7 +11,7 @@ export default {
 
             return username
         } else {
-            console.log("No name");
+            console.log("email");
         }
     }
 }

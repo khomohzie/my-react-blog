@@ -8,7 +8,6 @@ import username from '../../helpers/username'
 import Logo from '../../assets/images/logo.svg'
 
 const LargeNav = ({ sticky }) => {
-
     // changing the color of the dropdown navbar on mobile devices
     const [mobileBg, setMobileBg] = useState(false)
 
@@ -31,7 +30,10 @@ const LargeNav = ({ sticky }) => {
     auth().onAuthStateChanged((user) => {
         if (user) {
             setAuthenticated(true);
-            setName(username.getUsername(auth().currentUser.displayName));
+
+            const altname = auth().currentUser.email.split("@")[0];
+
+            setName(username.getUsername(auth().currentUser.displayName) || altname);
         } else {
             setAuthenticated(false);
             setName("");

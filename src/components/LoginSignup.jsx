@@ -143,7 +143,7 @@ const LoginSignup = () => {
                             <h2 className="title">Sign up</h2>
                             {/* <div className="input-field">
                                 <i className="fa fa-user"></i>
-                                <input type="text" placeholder="Username" />
+                                <input type="text" name="username" onChange={handleSignupChange} value={register.username || ""} placeholder="Username" />
                             </div> */}
                             <div className="input-field">
                                 <i className="fa fa-envelope"></i>

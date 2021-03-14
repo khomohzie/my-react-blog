@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import AOS from 'aos'
 import Background from '../assets/images/create-post.jpg'
 import Form from '../components/Form'
+import axios from '../helpers/axios'
 
 const Create = (props) => {
 
@@ -11,6 +12,28 @@ const Create = (props) => {
     const [content2, setContent2] = useState(false);
     const [content3, setContent3] = useState(false);
     const [content4, setContent4] = useState(false);
+
+    const [post, setPost] = useState([]);
+
+    const handleChange = (event) => {
+        event.preventDefault();
+
+        setPost({
+            ...post, [event.target.name]: event.target.value
+        });
+    }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        console.log(post)
+
+        await axios.createBlog(post)
+            .then(() => {
+                setPost({
+                    [event.target.name]: ''
+                })
+            })
+    }
 
     return (
         <div style={{ background: `url(${Background})`, backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
@@ -26,39 +49,39 @@ const Create = (props) => {
                             <form>
                                 <fieldset className="form-group">
                                     <label htmlFor="post-title" className="col-form-label create">Title</label>
-                                    <input type="text" className="form-control" name="post-title" id="post-title" placeholder="Blog Title" required />
+                                    <input type="text" className="form-control" name="title" onChange={handleChange} value={post.title || ""} id="post-title" placeholder="Blog Title" required />
                                 </fieldset>
                                 <fieldset className="form-group">
                                     <label htmlFor="post-intro" className="col-form-label create">Introduction</label>
-                                    <textarea className="form-control" rows="10" name="post-intro" id="post-intro" placeholder="Blog Introduction" required></textarea>
+                                    <textarea className="form-control" rows="10" name="intro" onChange={handleChange} value={post.intro || ""} id="post-intro" placeholder="Blog Introduction" required></textarea>
                                 </fieldset>
                                 <div className="row">
                                     <div className="col-12 col-md-4">
                                         <fieldset className="form-group">
                                             <label htmlFor="subtitle1" className="col-form-label create">Subtitle</label>
-                                            <input type="text" className="form-control" name="subtitle1" id="subtitle1" placeholder="Subtitle" />
+                                            <input type="text" className="form-control" name="subtitle1" onChange={handleChange} value={post.subtitle1 || ""} id="subtitle1" placeholder="Subtitle" />
                                             <small>If applicable</small>
                                         </fieldset>
 
-                                        <label htmlFor="image" className="col-form-label create">Image?</label>
+                                        {/* <label htmlFor="image" className="col-form-label create">Image?</label>
 
                                         <div className="custom custom-file">
-                                            <input multiple="" type="file" className="custom-file-input" name="Image" />
+                                            <input multiple="" type="file" className="custom-file-input" name="Image" onChange={handleChange} value={post.image || ""} />
                                             <label className="custom-file-label">
                                                 Click to open file browser
                                             </label>
                                         </div>
-                                        <small>If applicable</small>
+                                        <small>If applicable</small> */}
                                     </div>
                                     <div className="col-12 col-md-8">
                                         <fieldset className="form-group">
                                             <label htmlFor="content1" className="col-form-label create">Content</label>
-                                            <textarea className="form-control" rows="10" name="content1" id="content1" placeholder="Content" required></textarea>
+                                            <textarea className="form-control" rows="10" name="content1" onChange={handleChange} value={post.content1 || ""} id="content1" placeholder="Content" required></textarea>
                                         </fieldset>
                                     </div>
                                 </div>
 
-                                <div className="more-field">
+                                {/* <div className="more-field">
 
                                     <h5 className="create">More subtitles and contents?</h5>
 
@@ -101,9 +124,9 @@ const Create = (props) => {
                                         3 more contents
                                     </button>
                                         )}
-                                </div>
+                                </div> */}
 
-                                <input type="submit" className="submit-btn" value="Submit"/>
+                                <input type="submit" onClick={handleSubmit} className="submit-btn" value="Submit"/>
                             </form>
 
                         </div>
